@@ -1,0 +1,150 @@
+@charset "utf-8";
+@r:40rem;
+.flexD{
+	display:-webkit-flex;
+	display:flex;
+	display:-webkit-box-flex;
+	display:box-flex;
+}
+.flex{
+	-webkit-flex:1;
+	flex:1;
+	-webkit-box-flex:1;
+	box-flex:1;
+}
+body{font-family:'Microsoft YaHei',Arial,'Avenir',Helvetica,sans-serif;font-size:16/@r;line-height:1.5;}
+body,div,p,dd,dt,h1,h2,h3,h4,ul,li,ol,nav,article,section,header,footer,figure,figcaption,aside{margin:0;padding:0;}
+
+#app {
+	max-width:640/@r;
+	margin:0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position:relative;
+}
+h1,h2,h3,h4{
+  font-weight: normal;
+}
+ul,ol,li{
+  list-style-type: none;
+}
+a {
+	text-decoration:none;
+	color: #42b983;
+}
+#ry,#top250,#sy{position:relative;}
+.jz{
+	width:100%;height:100%;text-align:center;
+	position:fixed;top:0;left:0;
+
+	background-color:#999;
+	opacity:0.9;
+	z-index:99;
+	img{width:30%;}
+	.jz_text{
+		font-size:18/@r;
+	}
+	div{
+		position:absolute;top:50%;left:50%;
+		-webkit-transform:translate(-50%,-50%);
+		transform:translate(-50%,-50%);
+	}
+}
+
+.sec{
+	padding-top:70/@r;
+	background-color:white;
+}
+.title{
+	width:100%;
+	height:60/@r;
+	line-height:60/@r;
+	font-size:20/@r;
+	color:white;
+	text-align:center;
+	background-color:green;
+	position:fixed;
+	top:0;
+	left:50%;
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%);
+	z-index:999;
+}
+.nav{
+	width:100%;
+	position:fixed;
+	bottom:0;
+	left:50%;
+	z-index:999;
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%);
+	.flexD;
+	li{
+		height:60/@r;
+		line-height:60/@r;
+		color:red;
+		background-color:greenyellow;
+		font-size:16/@r;
+		.flex;
+		text-align:center;
+		border-left:2px solid white;
+		a{
+			color:#666
+		}
+		.router-link-active{
+			color:black;
+		}
+	}
+	li:first-child{
+		border-left:0 none;
+	}
+}
+
+.list{
+	padding:10/@r 20/@r 60/@r;
+	.list_fig{
+		.flexD;
+		padding:10/@r 0;
+		border-bottom:1px solid #999;
+		.list_img{
+			-webkit-flex:1.2;
+			flex:1.2;
+			-webkit-box-flex:1.2;
+			box-flex:1.2;
+			img{width:110%;}
+		}
+		.list_main{
+			-webkit-flex:4;
+			flex:5;
+			-webkit-box-flex:4;
+			box-flex:4;
+			padding-left:30/@r;
+			.list_title{
+				h2{
+					font-size:20/@r;
+				}
+				h3{
+					font-size:18/@r;
+				}
+			}
+			.list_lx{
+				i{
+					font-style:normal;
+					display:inline-block;
+					margin-right:8/@r;
+				}
+				i:last-child{margin-right:0;}
+			}
+			.list_yy,.list_dy{
+				a{
+					display:inline-block;
+					margin-right:8/@r;
+				}
+				a:last-child{margin-right:0;}
+			}
+		}
+	}
+	.list_fig:last-child{
+		border:0 none;
+	}
+}
